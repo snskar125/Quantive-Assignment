@@ -15,7 +15,7 @@ const getSheets = asyncHandler(async(req,res)=>{
     const client = new google.auth.OAuth2(
         process.env.CLIENT_ID,
         process.env.CLIENT_SECRET,
-        process.env.REDIRECT_URI
+        'postmessage'
     )
 
     //Getting Refresh Token
@@ -54,7 +54,7 @@ const getTabs = asyncHandler(async(req,res)=>{
     const client = new google.auth.OAuth2(
         process.env.CLIENT_ID,
         process.env.CLIENT_SECRET,
-        process.env.REDIRECT_URI
+        'postmessage'
     )
 
     //Getting Refresh Token

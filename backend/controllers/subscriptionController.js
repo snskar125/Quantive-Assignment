@@ -16,9 +16,9 @@ const addSubscription = asyncHandler(async (req, res) => {
     const oAuth2Client = new OAuth2Client(
         process.env.CLIENT_ID,
         process.env.CLIENT_SECRET,
-        process.env.REDIRECT_URI
+        'postmessage'
     )
-
+    
     //Destructuring Tokens
     const { tokens } = await oAuth2Client.getToken(authCode)
 

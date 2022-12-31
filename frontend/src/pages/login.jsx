@@ -20,6 +20,7 @@ export default function Login() {
         try{
             const res = await axios.post("/api/user/login",form)
             localStorage.setItem("QUANTIVE_TOKEN",res.data.token)
+            console.log(res.data.token);
             dispatch({type:"LOAD_TOKEN",payload:res.data.token})
             toast({
                 title:"Login Successful",

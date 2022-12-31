@@ -54,12 +54,11 @@ const getDashboardStats = asyncHandler(async(req,res)=>{
         throw new Error("Send all Details")
     }
 
-
     //Creating Google OAuth Client
     const client = new google.auth.OAuth2(
         process.env.CLIENT_ID,
         process.env.CLIENT_SECRET,
-        process.env.REDIRECT_URI
+        'postmessage'
     )
 
     //Getting Refresh Token
@@ -87,8 +86,7 @@ const getDashboardStats = asyncHandler(async(req,res)=>{
     const currObj = filtered[0]
 
     res.json({sheetTitle:sheetData.data.properties.title,tabTitle:currObj.properties.title,
-    columns : currObj.properties.gridProperties.columnCount,
-email})
+    columns : currObj.properties.gridProperties.columnCount,email})
 })
 
 module.exports = {addToDashboard,getDashboardItems,getDashboardStats}

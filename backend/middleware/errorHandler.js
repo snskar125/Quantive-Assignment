@@ -1,11 +1,11 @@
 const ErrorHandler = (err,req,res,next) => {
     //Checking if Status Code exists
-    const statusCode = res.statusCode || 500
-    res.status(statusCode)
+    res.status(400)
 
     //Error Messege sent with Response
     res.json({
-        message : err.message
+        message : err.message,
+        stack : err.stack
     })
 }
 
