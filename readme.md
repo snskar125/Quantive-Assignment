@@ -1,4 +1,4 @@
-QUANTIVE SINGALS ASSIGNMENT SUBMISSION
+QUANTIVE SIGNALS ASSIGNMENT SUBMISSION
 submitted by Sanskar Sharma
 
 Steps to Install Node Modules :-
